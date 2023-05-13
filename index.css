@@ -1,0 +1,153 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Main Styling */
+
+@font-face {
+  font-family: "GT America Standard";
+  src: url("./gt-america/GT-America-Standard-Regular-Trial.otf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --color-accent: #4c5fd5;
+  --color-primary: #dadbf1;
+  --color-foreground: #000000;
+  --color-white: #fff;
+}
+
+body {
+  font-family: "GT America Standard", sans-serif;
+}
+
+header {
+  background-color: black;
+  height: 60px;
+}
+
+.hero {
+  font-size: 3rem;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  background-color: var(--color-primary);
+  padding: 6rem 1rem;
+}
+
+.hero-title {
+  font-weight: 500;
+}
+
+.search-input {
+  /* width: 700px; */
+  width: min(100%, 700px);
+  position: relative;
+  margin-top: 1rem;
+}
+
+.search-input > input {
+  width: 100%;
+  display: block;
+  border: none;
+  outline: 1px solid var(--color-accent);
+  border-radius: 0.25rem;
+  font-size: 1.25rem;
+  height: 100%;
+  padding: 1.2rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.search-icon-right {
+  position: absolute;
+  top: 12px;
+  right: 5px;
+  font-size: 2.4rem;
+}
+
+/* Utils */
+.grid {
+  display: grid;
+  gap: 1rem;
+  row-gap: 5rem;
+}
+
+.flex-container {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Section of search items */
+.help-categories {
+  padding: 10rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.help-category > picture {
+  max-width: 90px;
+  position: relative;
+  top: 0.875rem;
+}
+
+.category-desc__title {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.category-desc__desc {
+  margin-top: 0.75rem;
+  font-size: 1.5rem;
+}
+
+.category-desc__link {
+  margin-top: 1rem;
+  display: block;
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: var(--color-accent);
+}
