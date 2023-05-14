@@ -22,6 +22,8 @@ dd {
 ul,
 ol {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* Set core body defaults */
@@ -113,8 +115,6 @@ header {
 /* Utils */
 .grid {
   display: grid;
-  gap: 1rem;
-  row-gap: 5rem;
 }
 
 .flex-container {
@@ -124,6 +124,8 @@ header {
 
 /* Section of search items */
 .help-categories {
+  gap: 1rem;
+  row-gap: 5rem;
   padding: 10rem;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -158,4 +160,34 @@ header {
 
 .category-desc__link:hover {
   text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-foreground);
+  color: var(--color-white);
+  padding: 3rem 5rem;
+}
+
+footer > .grid {
+  grid-template-columns: repeat(5, 1fr);
+  height: 20rem;
+}
+
+.footer__link-items {
+  margin-top: 0.8rem;
+}
+
+.footer__category-contact {
+  margin-top: 1.5rem;
+}
+
+.footer__logo {
+  max-width: 150px;
+  margin-bottom: 1rem;
+}
+
+.footer__company-rights {
+  font-size: 1.2rem;
+  margin-top: auto;
 }
