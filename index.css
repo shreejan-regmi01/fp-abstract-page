@@ -191,3 +191,23 @@ footer > .grid {
   font-size: 1.2rem;
   margin-top: auto;
 }
+
+.widget-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: none;
+  padding: 0.5em 1.3em;
+  border-radius: 9999px;
+  font-size: 1.07rem;
+  display: flex;
+  gap: 0.3rem;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.widget-btn__icon {
+  max-width: 28px;
+}
