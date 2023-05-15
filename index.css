@@ -216,6 +216,7 @@ header {
   padding: 2.7rem 6.5rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .header__logo-page-name {
@@ -237,6 +238,50 @@ header {
   padding-inline: 1rem;
   border-left: 2px solid var(--color-white);
   line-height: 30px;
+}
+
+.submit-req-btn,
+.sign-in-btn {
+  padding: 0.25em 1.5em 0.1em;
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  border-radius: 0.5rem;
+}
+.submit-req-btn {
+  border: 1px solid var(--color-white);
+  background-color: var(--color-foreground);
+  color: var(--color-white);
+}
+
+.sign-in-btn {
+  border: none;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.hamburger {
+  width: 25px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  row-gap: 5px;
+  display: none;
+}
+
+.hamburger > .bar {
+  height: 3px;
+  background-color: white;
+}
+
+@media screen and (max-width: 1200px) {
+  .submit-req-btn,
+  .sign-in-btn {
+    display: none;
+  }
+
+  .hamburger {
+    display: grid;
+  }
 }
 
 @media screen and (max-width: 680px) {
