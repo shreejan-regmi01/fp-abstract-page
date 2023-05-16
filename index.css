@@ -275,7 +275,8 @@ header {
 }
 
 .hamburger.active > .bar:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 6px);
+  transform-origin: top left;
+  transform: rotate(45deg) translate(3px, -3px);
   transition: 0.5s;
 }
 .hamburger.active > .bar:nth-child(2) {
