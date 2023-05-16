@@ -271,6 +271,21 @@ header {
 .hamburger > .bar {
   height: 3px;
   background-color: white;
+  transition: 0.5s;
+}
+
+.hamburger.active > .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px);
+  transition: 0.5s;
+}
+.hamburger.active > .bar:nth-child(2) {
+  background-color: transparent;
+  transition: 0.5s;
+}
+.hamburger.active > .bar:nth-child(3) {
+  transform-origin: bottom left;
+  transform: rotate(-45deg) translate(3px, 3px);
+  transition: 0.5s;
 }
 
 @media screen and (max-width: 1200px) {
