@@ -47,6 +47,18 @@ select {
   font: inherit;
 }
 
+a {
+  text-decoration: none;
+}
+
+.display {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
 /* Main Styling */
 
 @font-face {
@@ -62,6 +74,7 @@ select {
   --color-primary: #dadbf1;
   --color-foreground: #000000;
   --color-white: #fff;
+  --color-white-a-6: rgba(255, 255, 255, 0.7);
 }
 
 body {
@@ -217,6 +230,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .header__logo-page-name {
@@ -287,6 +301,40 @@ header {
   transform-origin: bottom left;
   transform: rotate(-45deg) translate(3px, 3px);
   transition: 0.5s;
+}
+
+.header__dropdown {
+  /* display: none; */
+  position: absolute;
+  background-color: inherit;
+  top: 100%;
+  left: 0%;
+  width: 100%;
+  padding: 2.75rem 0;
+  text-align: center;
+  color: var(--color-white);
+  border-top: 1px solid gray;
+}
+.header__dropdown a {
+  color: inherit;
+  display: block;
+  width: 50%;
+  margin-inline: auto;
+  padding-block: 0.75rem;
+  font-size: 1.5rem;
+}
+.header__dropdown a:hover {
+  color: var(--color-white-a-6);
+  transition: 0.2s;
+}
+.header__dropdown a:first-child {
+  border-bottom: 1px solid gray;
+}
+
+@media screen and (min-width: 1201px) {
+  .header__dropdown {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1200px) {
